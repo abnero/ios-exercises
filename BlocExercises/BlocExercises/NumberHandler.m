@@ -21,8 +21,17 @@
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
-    /* WORK HERE */
-    return 0;
+    NSInteger lowestNumber = 0;
+    
+        for (NSInteger i = 0; i <= arrayOfNumbers.count; i++) {
+               if (arrayOfNumbers[i] < lowestNumber){
+                   lowestNumber = arrayOfNumbers[i];
+                    } else {
+                            continue;
+                        }
+            }
+    
+        return lowestNumber;
 }
 
 @end
