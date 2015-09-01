@@ -29,19 +29,17 @@
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
-    
-    NSInteger lowestNumber;
-    
-    for (NSInteger i = 0; i <= arrayOfNumbers.count; i++) {
-        if (arrayOfNumbers[i] < lowestNumber){
-        lowestNumber = arrayOfNumbers[i];
-        } else {
-            continue;
+
+        NSInteger lowestNumber = NSIntegerMax;
+        
+        for (NSNumber *number in arrayOfNumbers) {
+            NSInteger integerValue = [number integerValue];
+            
+            if (integerValue < lowestNumber){
+                lowestNumber = integerValue;
+            }
         }
-    }
-
-    return lowestNumber;
-
+        return lowestNumber;
 }
 
 @end
